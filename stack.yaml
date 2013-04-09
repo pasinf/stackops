@@ -1,0 +1,23 @@
+nodes:
+    -
+       hostname_prefix: test_host 
+       base_image: test_image
+       flavor: 4
+       haproxy:
+           rule_1:
+               virtual_name: test_host_virtual_01
+               virtual_port: 10004
+               real_port: 10004
+    -
+       hostname_prefix: prash_host
+       base_image: prash_image
+       flavor: 3
+       haproxy:
+           rule_2:
+               virtual_name: prash_host_virtual_01
+               virtual_port: 80
+               real_port: 80
+    -
+       hostname_prefix: another_host
+       base_image: another_host_image
+       flavor: 2
